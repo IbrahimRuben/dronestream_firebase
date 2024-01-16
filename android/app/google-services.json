@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "493546047626",
+    "firebase_url": "https://dronestream-219f5-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "dronestream-219f5",
+    "storage_bucket": "dronestream-219f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493546047626:android:3259332caab323857f4573",
+        "android_client_info": {
+          "package_name": "com.example.dronestream_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsB1eoRst2WUUdG7z4-B3_NWgbaiQDLwU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
