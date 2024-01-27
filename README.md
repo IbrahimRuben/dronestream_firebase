@@ -1,5 +1,8 @@
 # Firebase DroneStream
 
+> [!CAUTION]
+> Esta aplicación puede no funcionar al descargarla debido a la baja de las API Keys utilizadas en este proyecto, pero sirve como ejemplo en el que puedes basarte.
+
 ## Descripción
 Esta aplicación utiliza el servicio de Google llamado Firebase para recibir en tiempo real contenido multimedia desde un cliente externo, simulado en el archivo _DummyServiceFirebase.py_.
 
