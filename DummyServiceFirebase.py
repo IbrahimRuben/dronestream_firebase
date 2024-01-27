@@ -12,13 +12,20 @@ firebase_admin.initialize_app(cred, {"databaseURL": "https://dronestream-219f5-d
 # Creamos una referencia a la raíz de la BBDD
 ref = db.reference("/")
 
+# Declaramos las variables de configuración de la cámara y demás
+width = 960
+height = 720
+fps = 20
+quality = 70
+duration = 15
+
 # Inicia la cámara
 cap = cv2.VideoCapture(0)
 
 # Declaramos resolucion de la cámara
-cap.set(3, 320) # 3 -> Ancho de la imagen
-cap.set(4, 240) # 4 -> Altura de la imagen
-cap.set(5, 39)  # 5 -> Frames por segundo (min 5fps, intervalos de 5)
+cap.set(3, width) # 3 -> Ancho de la imagen
+cap.set(4, height) # 4 -> Altura de la imagen
+cap.set(5, fps)  # 5 -> Frames por segundo (min 5fps, intervalos de 5)
 
 # Consultamos resolucion de la cámara y FPS
 print(cap.get(3))
@@ -35,7 +42,7 @@ n_img = 0
 #for i in range(120):
 
 # Tomamos fotos durante n tiempo
-while time.time() - st < 5:
+while time.time() - st < duration:
     # Escogemos la cantidad de imagenes por segundo y la invertimos
     #fps = 1/30
 
@@ -45,7 +52,7 @@ while time.time() - st < 5:
     # Reducing resolution (e.g., to 640x480)
     #resized_frame = cv.resize(frame, (320, 240))
 
-    _, buffer = cv.imencode('.jpg', frame)
+    _, buffer = cv.imencode('.jpg', frame, [int(cv.IMWRITE_JPEG_QUALITY), quality])
     
     # Codificamos la imagen
     jpg_as_text = base64.b64encode(buffer).decode("utf-8")

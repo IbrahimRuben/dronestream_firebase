@@ -79,10 +79,10 @@ class _MainScreenState extends State<MainScreen> {
   }
 
   // Decodificar y mostrar una imagen a partir de una cadena codificada en base64
-  Uint8List decodeAndShow(String frame) {
+  /*Uint8List decodeAndShow(String frame) {
     Uint8List image = base64Decode(frame);
     return image;
-  }
+  }*/
 
   // Desconectar el cliente y actualizar el estado del widget
   void disconnect() {
